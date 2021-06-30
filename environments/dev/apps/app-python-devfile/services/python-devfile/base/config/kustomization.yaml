@@ -2,3 +2,8 @@ resources:
 - 100-deployment.yaml
 - 200-service.yaml
 - 300-route.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: quay.io/starnold/python
+  newTag: main-d35e34829dd869b1d43b59deca779864825b00c9
