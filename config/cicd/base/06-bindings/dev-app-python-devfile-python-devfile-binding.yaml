@@ -1,0 +1,13 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  creationTimestamp: null
+  name: dev-app-python-devfile-python-devfile-binding
+  namespace: cicd
+spec:
+  params:
+  - name: imageRepo
+    value: quay.io/starnold/python
+  - name: tlsVerify
+    value: "true"
+status: {}

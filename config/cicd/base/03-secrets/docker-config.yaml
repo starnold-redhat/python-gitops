@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: regcred
+  namespace: cicd
+spec:
+  encryptedData:
+    .dockerconfigjson: AgAD/BtqbrGYjBrVW6aL3ThyBxKb/7yjiiPRh7qMSyx9st6F/7yL4dqqCIEeyUvH3/wqZQlo+9wuqBOBG9AXSF/ttLoZSFTuVsGcg9utsPAJnMOjgRj53EVr35/VUdifg5HK/8YFEsWfPI426xxEDSQpcPnnBaimBYqi2MsMoMHb1Pi91yO1wzzoRv1KwHBJhbuJaa1N/q4EnLqga6mpauO2TtpQ5awtsRFE1hqCIzY0pf0BOyGZz5htUJntftIRqDzB6MMNPcOsiVNRX0GRd2hPPSz6hhxrbC/hi1Fmf6SAiw+MFQ2RIkT4e0pWkvQM0zqP4SCkDdhq7SQD8t+GQnT7YAe4LbGX8LpKW9vyg98EyMU6jrCE4oGElCviZ4uB77eJUbvMe2/1AWN7hbFuvdt+gDU24rL53+/lMMTcPm5GCwZBQImRaqqfW4GXsekPVSlE6SeufwMSlNmntNn7AebrU/BScbK90T7iar4w5jEzJxQDiStjA4AEKcJD5CdP/IzqDmryY9fmgqHiGZEoq8yvFaSPR2ykDYH/0+8OT6iYt3cEILtyC9d1zxwrDm0f0xZSW09Vzgv8naZZ/uHs2j32orJ3/r4jzE5WAyh6KOCOKovonpKi/D3paZfFp1GY8AvZbsZ0lsPVvlxWvUzEOcH3WSJxg8cDcWvxYlLj/ijFx9+Y2hfcNU2LjnA3GNkzblmCILSjQDzyxAJkef2j620telcUpOiNSnKXtFxAMv+T0BGn3A0UhmEXuhmBI6pWW1dgfZiiaOxktnYyTSrYHEJg7I7ds8Ela2SCnAuA7oR5J8qb+Gk95neyt6KVzyV2PgWvOIFY76icx20nX46fALo9nnOiPC0kHTr5RCGb950Lsk4Uw4tYyxSgfrVFef4cyF1cuWPl1vKiRV75iORZGaKTAQ7LG+P6kyiMDXsn+1zyEytOrC5knHEfcCCUXgArKqLXol6mYkfv
+  template:
+    metadata:
+      creationTimestamp: null
+      name: regcred
+      namespace: cicd
+    type: kubernetes.io/dockerconfigjson
