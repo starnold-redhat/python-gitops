@@ -82,15 +82,11 @@ spec:
         --label=io.openshift.build.commit.ref='$(params.GIT_REF)'
     - name: IMAGE
       value: $(params.IMAGE)
-    - name: PATH_CONTEXT
-      value: .
-    - name: VERSION
-      value: 3.8-ubi8
     runAfter:
     - clone-source
     taskRef:
       kind: ClusterTask
-      name: s2i-python 
+      name: buildah
     workspaces:
     - name: source
       workspace: shared-data
