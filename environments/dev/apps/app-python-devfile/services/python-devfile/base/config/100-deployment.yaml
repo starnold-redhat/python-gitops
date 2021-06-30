@@ -22,7 +22,7 @@ spec:
         app.kubernetes.io/part-of: app-python-devfile
     spec:
       containers:
-      - image: nginxinc/nginx-unprivileged:latest
+      - image: quay.io/starnold/python
         imagePullPolicy: Always
         name: python-devfile
         ports:
