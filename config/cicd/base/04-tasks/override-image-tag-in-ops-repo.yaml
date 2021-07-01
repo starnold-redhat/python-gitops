@@ -2,11 +2,11 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   creationTimestamp: null
-  name: set-commit-status
+  name: override-image-tag-in-ops-repo
   namespace: cicd
 spec:
   params:
-  - name: GIT_REPO
+  - name: OPS_GIT_REPO
     type: string
   - name: DESCRIPTION
     type: string
@@ -15,7 +15,7 @@ spec:
   
   steps:
   - image: quay.io/cbanavik/set-commit-status:v0.1
-    name: override-image-tag-in-ops-repo
+    name: update-ops-repo-with-imagetag
     resources: {}
     script: >
       #!/bin/sh
