@@ -11,6 +11,7 @@ resources:
 - 03-secrets/webhook-secret-dev-python-devfile.yaml
 - 04-tasks/deploy-from-source-task.yaml
 - 04-tasks/set-commit-status-task.yaml
+- 04-tasks/override-image-tag-in-ops-repo.yaml
 - 05-pipelines/app-ci-pipeline.yaml
 - 05-pipelines/ci-dryrun-from-push-pipeline.yaml
 - 06-bindings/dev-app-python-devfile-python-devfile-binding.yaml

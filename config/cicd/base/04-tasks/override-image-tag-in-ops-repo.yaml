@@ -1,0 +1,46 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  creationTimestamp: null
+  name: set-commit-status
+  namespace: cicd
+spec:
+  params:
+  - name: GIT_REPO
+    type: string
+  - name: DESCRIPTION
+    type: string
+  - name: IMAGE
+    type: string
+  
+  steps:
+  - image: quay.io/cbanavik/set-commit-status:v0.1
+    name: override-image-tag-in-ops-repo
+    resources: {}
+    script: >
+      #!/bin/sh
+
+      git clone $(params.GIT_REPO)
+
+      # set image for dev deployment
+
+      cd python-gitops/environments/dev/apps/app-python-devfile/services/base/config
+      
+      kustomize edit set image $(params.IMAGE) 
+
+      # set image for stage deployment 
+
+      cd - 
+      
+      cd python-gitops/environments/stage/apps/app-python-devfile/services/base/config
+      
+      kustomize edit set image $(params.IMAGE)
+
+      # Push back to git
+
+      git add . 
+      
+      git commit -m "$(params.DESCRIPTION)"
+      
+      git push -u origin main
+       
