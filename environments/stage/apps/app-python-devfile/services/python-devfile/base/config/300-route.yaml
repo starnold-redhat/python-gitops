@@ -2,8 +2,8 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   creationTimestamp: null
-  name: python-devfile
-  namespace: dev
+  name: stage-python-devfile
+  namespace: stage
 spec:
   port:
     targetPort: http
