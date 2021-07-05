@@ -60,7 +60,7 @@ spec:
       
       git commit -m "$(params.DESCRIPTION)"
       
-      git push "https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git"
+      git push "https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git" main
   workspaces:
     - name: source
        
