@@ -12,9 +12,14 @@ spec:
     type: string
   - name: IMAGE
     type: string
+  - name: BUILDER_IMAGE
+    default: >-
+        registry.redhat.io/rhel8/buildah@sha256:6a68ece207bc5fd8db2dd5cc2d0b53136236fb5178eb5b71eebe5d07a3c33d13
+    description: The location of the buildah builder image.
+    type: string
   
   steps:
-  - image: quay.io/cbanavik/set-commit-status:v0.1
+  - image: $(params.BUILDER_IMAGE)
     name: update-ops-repo-with-imagetag
     resources: {}
     script: >
