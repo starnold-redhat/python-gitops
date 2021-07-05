@@ -36,13 +36,13 @@ spec:
 
       # set image for dev deployment
 
-      cd /workspace/python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE) 
 
       # set image for stage deployment 
       
-      cd /workspace/python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE)
 
@@ -52,5 +52,5 @@ spec:
       
       git commit -m "$(params.DESCRIPTION)"
       
-      git push -u origin main
+      git push "https://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@github.com/starnold-redhat/python-gitops.git"
        

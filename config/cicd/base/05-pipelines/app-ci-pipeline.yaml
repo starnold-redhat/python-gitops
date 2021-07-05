@@ -42,6 +42,8 @@ spec:
     type: string
   - name: GIT_REPO
     type: string
+  - name: GIT_OPS_REPO
+    type: string
   tasks:
   - name: set-pending-status
     params:
@@ -72,6 +74,18 @@ spec:
     workspaces:
     - name: output
       workspace: shared-data
+  - name: clone-gitops
+    params:
+    - name: url
+      value: $(params.GIT_OPS_REPO)
+    runAfter:
+    - clone-source
+    taskRef:
+      kind: ClusterTask
+      name: git-clone
+    workspaces:
+    - name: output
+      workspace: shared-data
   - name: build-image
     params:
     - name: TLSVERIFY
@@ -83,7 +97,7 @@ spec:
     - name: IMAGE
       value: $(params.IMAGE)
     runAfter:
-    - clone-source
+    - clone-gitops
     taskRef:
       kind: ClusterTask
       name: buildah
@@ -105,6 +119,9 @@ spec:
     taskRef:
       kind: Task
       name: override-image-tag-in-ops-repo
+    workspaces:
+    - name: source
+      workspace: shared-data
   workspaces:
   - description: This workspace will receive the cloned git repo.
     name: shared-data
