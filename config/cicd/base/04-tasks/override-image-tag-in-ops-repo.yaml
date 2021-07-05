@@ -13,7 +13,7 @@ spec:
   - name: IMAGE
     type: string
   - name: BUILDER_IMAGE
-    default: quay.io/starnold/pipeline-kustomize:1 
+    default: quay.io/starnold/pipeline-kustomize:2 
     description: The location of the buildah builder image.
     type: string
   
@@ -29,7 +29,7 @@ spec:
       pwd
 
       ls -al
-      
+
       # set image for dev deployment
 
       cd /workspace/python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
