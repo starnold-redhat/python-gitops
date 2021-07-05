@@ -30,25 +30,27 @@ spec:
     script: >
       #!/bin/sh
 
+      cd /workspace/source
+
       git config --global user.email "starnold@redhat.com"
   
       git config --global user.name "starnold-redhat"
-
-      git clone $(params.OPS_GIT_REPO)
 
       pwd
 
       ls -al
 
+      ls -al gitops
+
       # set image for dev deployment
 
-      cd /workspace/source/python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/gitops/python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE) 
 
       # set image for stage deployment 
       
-      cd /workspace/source/python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/gitops/python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE)
 
