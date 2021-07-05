@@ -60,7 +60,14 @@ spec:
       
       git commit -m "$(params.DESCRIPTION)"
       
-      git push "https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git" main
+      git push -u "https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git" main
+
+      git remote add origin https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git
+      
+      git push -u origin main
+
+
+
   workspaces:
     - name: source
        
