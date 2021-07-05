@@ -56,15 +56,19 @@ spec:
 
       # Push back to git
 
+      echo "trying git stuff"
+
+      cd /workspace/source/gitops
+
       git add . 
       
       git commit -m "$(params.DESCRIPTION)"
       
-      git push -u "https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git" main
+      echo "trying some pushes"
 
-      git remote add origin https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git
+      git show-ref
       
-      git push -u origin main
+      git push -u origin HEAD:main
 
 
 
