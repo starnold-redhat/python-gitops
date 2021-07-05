@@ -36,7 +36,7 @@ spec:
 
       # set image for dev deployment
 
-      cd python-gitops/environments/dev/apps/app-python-devfile/services/base/config
+      cd python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
       
       ./kustomize edit set image $(params.IMAGE) 
 
@@ -44,7 +44,7 @@ spec:
 
       cd - 
       
-      cd python-gitops/environments/stage/apps/app-python-devfile/services/base/config
+      cd python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
       
       ./kustomize edit set image $(params.IMAGE)
 
