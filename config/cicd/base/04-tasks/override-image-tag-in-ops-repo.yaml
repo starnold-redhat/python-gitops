@@ -30,11 +30,17 @@ spec:
     script: >
       #!/bin/sh
 
-      cd /workspace/source
+      cd /workspace/source/
 
       git config --global user.email "starnold@redhat.com"
   
       git config --global user.name "starnold-redhat"
+
+      mkdir localgitops
+
+      cd localgitops
+      
+      git clone "https://${GITHOSTACCESSTOKEN}@github.com/starnold-redhat/python-gitops.git"
 
       pwd
 
@@ -44,13 +50,13 @@ spec:
 
       # set image for dev deployment
 
-      cd /workspace/source/gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/localgitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE) 
 
       # set image for stage deployment 
       
-      cd /workspace/source/gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/localgitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE)
 
@@ -58,7 +64,7 @@ spec:
 
       echo "trying git stuff"
 
-      cd /workspace/source/gitops
+      cd /workspace/source/localgitops
 
       git add . 
       
