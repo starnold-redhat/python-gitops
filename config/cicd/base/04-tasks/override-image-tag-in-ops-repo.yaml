@@ -50,13 +50,13 @@ spec:
 
       # set image for dev deployment
 
-      cd /workspace/source/localgitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/localgitops/python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE) 
 
       # set image for stage deployment 
       
-      cd /workspace/source/localgitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/source/localgitops/python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
       
       kustomize edit set image $(params.IMAGE)
 
@@ -64,7 +64,7 @@ spec:
 
       echo "trying git stuff"
 
-      cd /workspace/source/localgitops
+      cd /workspace/source/localgitops/python-gitops
 
       git add . 
       
