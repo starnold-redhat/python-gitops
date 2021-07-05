@@ -24,6 +24,10 @@ spec:
     script: >
       #!/bin/sh
 
+      git config --global user.email "starnold@redhat.com"
+  
+      git config --global user.name "pipeline"
+
       git clone $(params.OPS_GIT_REPO)
 
       pwd
