@@ -14,7 +14,8 @@ spec:
     type: string
   - name: BUILDER_IMAGE
     default: >-
-        registry.redhat.io/rhel8/buildah@sha256:6a68ece207bc5fd8db2dd5cc2d0b53136236fb5178eb5b71eebe5d07a3c33d13
+         registry.redhat.io/openshift-pipelines/pipelines-git-init-rhel8@sha256:afc5d3f9efe26c7042635d43b8ffd09d67936e3d0b6b901dc08a33e20313d361
+
     description: The location of the buildah builder image.
     type: string
   
@@ -27,11 +28,13 @@ spec:
 
       git clone $(params.OPS_GIT_REPO)
 
+      curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+
       # set image for dev deployment
 
       cd python-gitops/environments/dev/apps/app-python-devfile/services/base/config
       
-      kustomize edit set image $(params.IMAGE) 
+      ./kustomize edit set image $(params.IMAGE) 
 
       # set image for stage deployment 
 
@@ -39,7 +42,7 @@ spec:
       
       cd python-gitops/environments/stage/apps/app-python-devfile/services/base/config
       
-      kustomize edit set image $(params.IMAGE)
+      ./kustomize edit set image $(params.IMAGE)
 
       # Push back to git
 
