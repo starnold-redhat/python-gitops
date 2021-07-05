@@ -44,6 +44,7 @@ spec:
     type: string
   - name: GIT_OPS_REPO
     type: string
+    value:  "https://github.com/starnold-redhat/python-gitops.git" 
   tasks:
   - name: set-pending-status
     params:
