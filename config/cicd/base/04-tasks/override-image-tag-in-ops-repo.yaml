@@ -28,6 +28,12 @@ spec:
 
       git clone $(params.OPS_GIT_REPO)
 
+      pwd
+
+      ls -al
+
+      yum install -y tar
+
       curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
 
       # set image for dev deployment
