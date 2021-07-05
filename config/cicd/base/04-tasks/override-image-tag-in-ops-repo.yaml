@@ -20,6 +20,12 @@ spec:
   steps:
   - image: $(params.BUILDER_IMAGE)
     name: update-ops-repo-with-imagetag
+    env:
+      - name: GITHOSTACCESSTOKEN
+        valueFrom:
+          secretKeyRef:
+            key: "TOKEN"
+            name: "gitcreds"
     resources: {}
     script: >
       #!/bin/sh
@@ -52,5 +58,5 @@ spec:
       
       git commit -m "$(params.DESCRIPTION)"
       
-      git push "https://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@github.com/starnold-redhat/python-gitops.git"
+      git push "https://$(env.GITHOSTACCESSTOKEN)@github.com/starnold-redhat/python-gitops.git"
        
