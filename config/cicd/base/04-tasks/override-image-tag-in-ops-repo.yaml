@@ -20,7 +20,7 @@ spec:
     script: >
       #!/bin/sh
 
-      git clone $(params.GIT_REPO)
+      git clone $(params.OPS_GIT_REPO)
 
       # set image for dev deployment
 
