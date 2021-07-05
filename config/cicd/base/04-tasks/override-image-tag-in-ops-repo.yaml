@@ -26,7 +26,7 @@ spec:
 
       git config --global user.email "starnold@redhat.com"
   
-      git config --global user.name "pipeline"
+      git config --global user.name "starnold-redhat"
 
       git clone $(params.OPS_GIT_REPO)
 
