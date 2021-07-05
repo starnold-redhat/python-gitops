@@ -29,24 +29,18 @@ spec:
       pwd
 
       ls -al
-
-      yum install -y tar
-
-      curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
-
+      
       # set image for dev deployment
 
-      cd python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/python-gitops/environments/dev/apps/app-python-devfile/services/python-devfile/base/config
       
-      ./kustomize edit set image $(params.IMAGE) 
+      kustomize edit set image $(params.IMAGE) 
 
       # set image for stage deployment 
-
-      cd - 
       
-      cd python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
+      cd /workspace/python-gitops/environments/stage/apps/app-python-devfile/services/python-devfile/base/config
       
-      ./kustomize edit set image $(params.IMAGE)
+      kustomize edit set image $(params.IMAGE)
 
       # Push back to git
 
