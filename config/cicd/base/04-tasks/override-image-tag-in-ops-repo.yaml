@@ -13,9 +13,7 @@ spec:
   - name: IMAGE
     type: string
   - name: BUILDER_IMAGE
-    default: >-
-         registry.redhat.io/openshift-pipelines/pipelines-git-init-rhel8@sha256:afc5d3f9efe26c7042635d43b8ffd09d67936e3d0b6b901dc08a33e20313d361
-
+    default: quay.io/starnold/pipeline-kustomize:1 
     description: The location of the buildah builder image.
     type: string
   
