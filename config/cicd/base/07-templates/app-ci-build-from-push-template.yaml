@@ -38,6 +38,8 @@ spec:
         value: $(tt.params.fullname)
       - name: GIT_REPO
         value: $(tt.params.gitrepositoryurl)
+      - name: GIT_OPS_REPO
+        value:  "https://github.com/starnold-redhat/python-gitops.git" 
       - name: TLSVERIFY
         value: $(tt.params.tlsVerify)
       - name: BUILD_EXTRA_ARGS
