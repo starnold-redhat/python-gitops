@@ -14,12 +14,3 @@ spec:
   source:
     path: environments/stage/apps/app-python-devfile/overlays
     repoURL: https://github.com/starnold-redhat/python-gitops.git
-status:
-  health: {}
-  summary: {}
-  sync:
-    comparedTo:
-      destination: {}
-      source:
-        repoURL: ""
-    status: ""
