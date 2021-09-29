@@ -32,7 +32,7 @@ spec:
     interceptors:
     - github:
         secretRef:
-          secretKey: webhook-secret-key
+          secretKey: WebHookSecretKey 
           secretName: webhook-secret-dev-python-devfile
     - cel:
         filter: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
