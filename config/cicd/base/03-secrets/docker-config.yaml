@@ -12,6 +12,6 @@ spec:
     metadata:
       creationTimestamp: null
       name: regcred
-      namespace: default
+      namespace: cicd 
     type: kubernetes.io/dockerconfigjson
 
