@@ -2,14 +2,15 @@ apiVersion: bitnami.com/v1alpha1
 kind: SealedSecret
 metadata:
   creationTimestamp: null
-  name: git-host-access-token
+  name: git-host-acces-token
   namespace: cicd
 spec:
   encryptedData:
-    token: AgBmjv/WR2ANpTkQ0DoI5H4516NOY4VvJJYgB4ZbE3hHwEwB5HZmiUrd4U4ZdJl50sM0lrC2++ZzXB9DRRCV0s12k08L5GcUdluJmgtIFb/Mk4BiyN82JmMbyMfRRhdHUuo6ucsdCkAYAL4jH9J31iZIPD58XppOmPsvWEWeTlCtpJ8wTEPynhzVPT6yDaALDciLOC3Y78A2EIY4W5MLgdhaQUCKt5KYdxclB7+FW3+Yj4Ye0sLRi0G5MEZ9xfnxcVsTaLYth3mGpQKL+4Peomb3WE15os4U1nFNVkeB6R8SJtB2dd1YQeFtvErDa6ili++tOaiCN4iidNYeOFZac+QZXjnUr+DhbVgxrOz21BQslAOMhuXwwwK9noXb4qfoRCQiPIQb6olHj++LU5k8B8Ff5lry0KkrbzX+kv8ZL86DewSAI0mgOjYQtwsAkXqo4zg+FSu5SPPKKkNg/MNfKT2iq3zA0RaOL+NFyh4eIrDwyDFDUHUm4p5+mPx8nF+jYylK1BjQUj+zEq1k3z5y/UKnq2ty11NzzWeq18G/iwMPmfJGR/yl7swO5S0Jn7wjdz3jxg9R457Trc9fQ4DuwOQYO02EGC8Oc5C6PSlghP+ioprPixvnJep754llp5ROv20f8jumeRBD0qAymBc+RndOkC5D6AbbfOX8IhfoLWAZnTEYilY+XVGXm98gHSbDYXdCE2lkNj7gC14A7llP+lHqfgVR312/UyIt2jcrN6blGO91uSnylyko
+    token: AgAaun0bdQIA1lj+kRLJDfneUj+bYTtzlcv8pCmPLEVb+Bem/S0+N0nu2nhoUBfU6/TNpfM8GdrXYWVL11KK8XQnPyODZQTaf65QUh4fLHUpK6AC8QyZ8ZAjQ7f6jA5H3L9zCFQ3RkYeRDzPGpU60hAJnuW5ORi9+8Wl8ENkxzP9Ju44lp/IBsCIJauwhVGzmqNYvFYB7fK3hKwdzvIzahTs1iYYRQekMre3CuwaUcsCOpQXhl7DtZlgCD4yFZJyzrEdfNWvwFGy8+A+DHHdlkyqmhkAeMS5l/P45RSBDzSDvYbDJaFeCqoGMML9kHhRXMzt04M/tH7HmhLpLSFT4bfCC00Vu6xOOpJOQ7Fhlk6Zif/uQW5is9vkoTAIhX5tKWb81y9W6PFQsLwBKtULfH2ZHy8gK3F/b7PsKRO6UlTt+S0bys5A/u8GeGxz3nx2USWDeCGwP7EYcnmdH9jX3rv+pgUmKhGwlRezLqHz4CjH7wcfb/F5SslgnT8dhgcGC+hc5xY97IAVVdg8Bdc1HCtu2dkK2q+wzS3skUq0BAGzq6pAHJe2/sPp05eCyAV4jzYib5vzCHRxTuYwHLYBqtBUjLrpTVVtmLxJtBhswT3MCF/cvATK2P8y1K9kSoCxJ62XnlJ7sRb6nWvtIiKEg4T9epgsZsIV8eXjzdHVirPXQnESDPs7fxNMgZPTnmDd+g4AgoGBltX3jocyYNRXsuAENcm+ulBb8vdGNneWbIsLLklGBWIayIcz
   template:
+    data: null
     metadata:
       creationTimestamp: null
-      name: git-host-access-token
+      name: git-host-acces-token
       namespace: cicd
-    type: Opaque
+
