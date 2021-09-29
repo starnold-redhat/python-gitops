@@ -24,8 +24,8 @@ spec:
       - name: GITHOSTACCESSTOKEN
         valueFrom:
           secretKeyRef:
-            key: "TOKEN"
-            name: "gitcreds"
+            key: "token"
+            name: "git-host-access-token"
     resources: {}
     script: >
       #!/bin/sh
