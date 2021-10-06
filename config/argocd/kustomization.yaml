@@ -4,3 +4,4 @@ resources:
 - dev-app-python-devfile-app.yaml
 - dev-env-app.yaml
 - stage-env-app.yaml
+- stage-python-devfile-app.yaml
