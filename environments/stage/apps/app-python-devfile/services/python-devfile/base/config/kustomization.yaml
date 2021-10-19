@@ -6,4 +6,4 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
 - name: quay.io/starnold/python
-  newTag: main-89b2e4eefa8408029433f9e0fa874ddc04b495ad
+  newTag: main-4b5ab2cda07942feb0bcc2cd9c7a284486f04610
