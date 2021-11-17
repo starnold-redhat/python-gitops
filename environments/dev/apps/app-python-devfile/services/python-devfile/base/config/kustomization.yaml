@@ -5,5 +5,7 @@ resources:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
+- name: image-registry.openshift-image-registry.svc:5000/cicd/python-devfile
+  newTag: main-d1b51ba32c680430c6804acdce4eafec8b0e782a
 - name: quay.io/starnold/python
   newTag: main-c5f23b77f83e5fbb34cef12101d22f5989da1c4b
